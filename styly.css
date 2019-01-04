@@ -1,0 +1,635 @@
+/* Moderní box model */
+html { box-sizing: border-box; }
+*, *:after, *:before { box-sizing: inherit; }
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Overpass', sans-serif;
+font-family: 'Fira Sans Condensed', sans-serif;
+font-family: 'Archivo Narrow', sans-serif;
+
+/* Mobil */
+@media only screen and (max-width: 480px){}
+
+/* Tablet */
+@media only screen and (max-width: 768px){}
+
+
+/* Základní stylování body */
+body{
+  font-family: 'Open Sans', sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#fff;
+}
+
+/* Obecně */
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.povidani h1, .container h1{
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.povidani ul{
+  margin-left: 30%;
+}
+
+.dark{
+  padding: 15px;
+  background: #20282d;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+/* Stylování divů */
+div{
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Stylování nadpisů */
+h1{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin: 40px 0px 30px 0px;
+}
+
+h2,h3,h4,h5,h6{
+  font-family: 'Open Sans', sans-serif;
+  /*font-size: 120%;*/
+  text-align: center;
+}
+
+/* Stylování odstavců */
+p{
+  font-family: 'Overpass', sans-serif;
+  text-align: justify;
+  margin: 15px 200px 15px 200px;
+}
+
+.dark p{
+  margin: 15px 100px 15px 100px;
+}
+
+/* Stylování anchors */
+a{
+  font-family: 'Overpass', sans-serif;
+  color: #f27393;
+  text-decoration: none;
+}
+
+p a{
+  font-weight: bold;
+}
+
+/* Hlavička */
+header{
+  background: #20282d;
+  color: white;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #bb113c 3px solid;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+header a{
+  color: white;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:18px;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a{
+  color: #bb113c;
+  font-weight: bold;
+}
+
+header .container a:hover{
+  color: #f27393;
+  font-weight: bold;
+}
+
+/* Pruh */
+.pruh{
+    border-bottom: #bb1122 3px solid;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Dropdown */
+.dropdown{
+  float: left;
+  overflow: hidden;
+}
+
+nav .dropdown .dropbtn{
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 16px 20px 16px;
+  background-color: inherit;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+header button{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 0 20px 0 20px;
+}
+
+nav a:hover, .dropdown:hover .dropbtn{
+  color: #f27393;
+}
+
+/* Dropdown content */
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #20282d;
+  min-width: 120px;
+  max-width: 160px;
+}
+
+/* Odkazy v dropdownu */
+.dropdown-content a{
+  float: none;
+  color: white;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Stylování rozrolovaných při najetí myši */
+.dropdown-content a:hover{
+  color: #f27393;
+}
+
+/* Dropdown při najetí myši */
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+/* Showcase */
+#showcase{
+  min-height: 400px;
+  background: url('./img/IMG_2896.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+  text-align: center;
+  color: #ffffff;
+}
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p{
+  font-size: 20px;
+}
+
+/* Povídání */
+.povidani h1{
+    color: #0b0d0f;
+}
+
+.povidani p{
+  margin: 15px 120px 15px 120px;
+}
+
+.povidani p .highlight{
+  color: #bb113c;
+}
+
+/* Povídání 2*/
+.povidani2 p{
+  text-align: center;
+  margin: 15px 120px 15px 120px;
+}
+
+.povidani2 h1{
+    color: #0b0d0f;
+}
+
+/* Boxes, o nás*/
+#boxes{
+  margin-top: 20px;
+}
+
+#boxes .box{
+  float: left;
+  text-align: center;
+  width: 33%;
+  padding: 10px;
+}
+
+#boxes .box p{
+  text-align: justify;
+  padding: 10px;
+  margin: 0px;
+}
+
+#boxes .box img{
+  width: 180px;
+}
+
+/* Boxes #2, o nás v číslech */
+#boxes2{
+  margin-top: 20px;
+}
+
+#boxes2 .box2{
+  float: left;
+  text-align: center;
+  width: 33%;
+  min-width: 200px;
+  padding: 10px;
+  background-color: #f27393;
+  border-style: solid;
+  border-width: 15px;
+  border-color: #fff;
+}
+
+#boxes2 .box2 p{
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#boxes2 .box2 img{
+  width: 180px;
+}
+
+/* Boxes #3, animated image grid */
+.xop-section{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2%;
+}
+
+.xop-grid{
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.xop-grid:after{
+  clear: both;
+}
+
+.xop-grid:after, .xop-bop:before{
+  content: "";
+  display: table;
+}
+
+.xop-grid li{
+  width: 328px;
+  height: 328px;
+  display: inline-block;
+  margin: 20px;
+}
+
+.xop-box {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+  border-radius: 16px;
+  -webkit-transition: 0.3s ease-in-out,
+  -webkit-transform 0.3s ease-in-out;
+	-moz-transition:  0.3s ease-in-out,
+  -moz-transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out,
+  transform 0.3s ease-in-out, ;
+}
+
+.xop-box:hover {
+	transform: scale(1.05);
+}
+
+.xop-img-1 {
+	background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+	url(./img/akce_1.jpg);
+}
+
+.xop-img-2 {
+	background:	linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+  url(./img/akce_2.jpg);
+}
+
+.xop-img-3 {
+	background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+	url(./img/akce_3.jpg);
+}
+
+.xop-img-4 {
+	background: linear-gradient( rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.10)), /* bottom, image */
+	url(./img/akce_4.jpg);
+}
+
+.xop-info {
+	width: inherit;
+	height: inherit;
+}
+
+.xop-info h3 {
+	font-family: inherit;
+  color: #fff;
+  font-weight: 400;
+	font-size: 42px;
+	margin: 0;
+	padding: 100px 0 0 0;
+	line-height: 1.5;
+  text-align: center;
+  width: 100%;
+}
+
+.xop-info p {
+	font-family: inherit;
+  color: #fff;
+	padding: 4px 5px;
+	margin: 0;
+	font-size: 14px;
+	line-height: 2;
+  text-align: center;
+  width: 100%;
+}
+
+/* Ikonky */
+.ikonky{
+  min-height: 260px;
+}
+
+.ikonky ul{
+  display: flex;
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  transform: translate(-50%,-50%);
+}
+
+.ikonky ul li{
+  list-style: none;
+}
+
+.ikonky ul li a{
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 55px;
+  color: #0b0d0f;
+  margin: 0 15px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
+.ikonky ul li a .fa{
+  color: #0b0d0f;
+  transition: .5s;
+}
+
+.ikonky ul li a:hover .fa{
+  transform: rotateY(360deg);
+  color: #bb1122;
+  transition: .5s;
+}
+
+/* Slider galerie */
+.container2{
+  width: 70%;
+  margin: auto;
+  padding-top: 30px;
+  overflow: hidden;
+  max-height: 640px;
+}
+
+.slider{
+  position: relative;
+  width: 500%;
+  animation: animate 10s linear infinite;
+}
+
+.slide{
+  position: relative;
+  width: 20%;
+  float: left;
+  height: 100vh;
+}
+
+.slide h2{
+  margin: 0px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 35px;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-weight: lighter;
+}
+
+.slide{
+  background-size: cover;
+}
+
+.slide:nth-child(1){
+  background: url(./img/soutez_1.jpg);
+}
+.slide:nth-child(2){
+  background: url(./img/soutez_2.jpg);
+}
+.slide:nth-child(3){
+  background: url(./img/soutez_3.jpg);
+}
+.slide:nth-child(4){
+  background: url(./img/soutez_5.jpg);
+}
+.slide:nth-child(5){
+  background: url(./img/soutez_6.jpg);
+}
+
+@keyframes animate {
+  0%{
+    left: 0;
+  }
+  16%{
+    left: 0;
+  }
+  20%{
+    left: -100%;
+  }
+  36%{
+    left: -100%;
+  }
+  40%{
+    left: -200%;
+  }
+  56%{
+    left: -200%;
+  }
+  60%{
+    left: -300%;
+  }
+  76%{
+    left: -300%;
+  }
+  80%{
+    left: -400%;
+  }
+  96%{
+    left: -400%;
+  }
+  100%{
+    left: 0;
+  }
+}
+
+/* Stylování zápatí */
+.foot{
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.foot p{
+  text-align: center;
+  font-size: 80%;
+  font-weight: lighter;
+}
+
+.foot2{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+
+.foot2 p{
+  text-align: center;
+  font-size: 80%;
+  margin-bottom: 20px;
+}
+
+
+/* Media Queries */
+/* Menší PC */
+@media(max-width: 1224px){
+  p{
+    margin: 15px 100px 15px 100px;
+    padding: 0;
+  }
+}
+
+/* Tablet */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #boxes .box{
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header{
+    padding-bottom: 20px;
+  }
+
+  p{
+    margin: 15px 80px 15px 80px;
+    padding: 0;
+  }
+
+  #showcase h1{
+    margin-top: 40px;
+    font-size: 45px;
+  }
+}
+
+/* Mobil */
+@media(max-width: 460px){
+  header #branding,
+  header nav,
+  header nav li,
+  #boxes .box,
+  #boxes2 .box2{
+    float:none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header{
+    padding-bottom: 20px;
+  }
+
+  p{
+    margin: 15px 20px 15px 20px;
+    padding: 0;
+  }
+
+  #showcase h1{
+    visibility: hidden;
+  }
+
+  .povidani p, .povidani2 p{
+    margin: 15px 20px 15px 20px;
+  }
+}
+
+/* Přizpůsobení pro tisk */
+@media print {
+  .nav,
+  #showcase,
+  .foot, .foot2,
+  .container2{
+    display: none;
+  }
+
+  div{
+    background-color: #fff;
+    color: black;
+  }
+}
